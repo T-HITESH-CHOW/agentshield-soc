@@ -4,6 +4,7 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class Settings(BaseSettings):
+    DATABASE_URL: str = "postgresql://user:password@localhost:5432/agentshield"
     """Runtime configuration. Secrets must come from the environment, never source."""
 
     model_config = SettingsConfigDict(
